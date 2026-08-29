@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+:root {
+  --bg: #0b0a08;
+  --bg-raised: #17140f;
+  --ink: #f4efe4;
+  --ink-dim: #a8a196;
+  --line: #2c2820;
+
+  --copper: #f5a623;
+  --copper-dim: #8a5f1b;
+  --signal: #ff5a36;
+  --wire: #6fae3f;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-bg-raised: var(--bg-raised);
+  --color-ink: var(--ink);
+  --color-ink-dim: var(--ink-dim);
+  --color-line: var(--line);
+  --color-copper: var(--copper);
+  --color-copper-dim: var(--copper-dim);
+  --color-signal: var(--signal);
+  --color-wire: var(--wire);
+  --font-mono: 'Space Mono', ui-monospace, monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+[data-string] { will-change: transform; }
+
+::selection {
+  background: var(--copper);
+  color: var(--bg);
+}
+
+/* Ticker marquee — pure CSS, no JS scroll-physics involvement */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.marquee-track {
+  animation: marquee 28s linear infinite;
+}
+
+@keyframes blob-drift-a {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(3%, 5%) scale(1.12); }
+}
+@keyframes blob-drift-b {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-4%, -3%) scale(1.08); }
+}
+.blob-a { animation: blob-drift-a 16s ease-in-out infinite; }
+.blob-b { animation: blob-drift-b 20s ease-in-out infinite; }
