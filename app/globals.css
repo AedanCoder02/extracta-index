@@ -57,7 +57,7 @@ body {
   to { transform: translateX(-50%); }
 }
 .marquee-track {
-  animation: marquee 70s linear infinite;
+  animation: marquee 120s linear infinite;
 }
 
 @keyframes blob-drift-a {
