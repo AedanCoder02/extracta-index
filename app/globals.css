@@ -51,15 +51,6 @@ body {
   color: var(--bg);
 }
 
-/* Ticker marquee — pure CSS, no JS scroll-physics involvement */
-@keyframes marquee {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
-}
-.marquee-track {
-  animation: marquee 120s linear infinite;
-}
-
 @keyframes blob-drift-a {
   0%, 100% { transform: translate(0, 0) scale(1); }
   50% { transform: translate(3%, 5%) scale(1.12); }

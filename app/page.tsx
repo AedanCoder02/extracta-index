@@ -7,7 +7,6 @@ import { TrendingDown, PieChart, CircleDollarSign, ArrowUpRight } from "lucide-r
 import { HERO, PROCESS_STEPS, METRICS, CTA, PARTNER } from "@/lib/content";
 import { Reveal } from "@/components/Reveal";
 import { GradientField } from "@/components/GradientField";
-import { Ticker } from "@/components/Ticker";
 import { BentoStat } from "@/components/BentoStat";
 
 const METRIC_ICONS = [TrendingDown, PieChart, CircleDollarSign];
@@ -57,8 +56,6 @@ export default function Home() {
           </Link>
         </div>
       </section>
-
-      <Ticker />
 
       {/* The Opportunity — bento stat grid */}
       <section className="border-b border-line py-24 px-6">
